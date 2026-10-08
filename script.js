@@ -4,13 +4,13 @@ const daftarLab = [
 
 const labGrid = document.getElementById("labGrid");
 
-daftarLab.foraEach(function (lab) {
+daftarLab.forEach(function (lab) {
     const kartu = document.createElement("a");
     kartu.className = "lab-card";
     kartu.href = lab.link;
     kartu.innerHTML = `
     <span class="nomor">${lab.nomor}</span>
-    <h3>$(lab.judul)</h3>
+    <h3>${lab.judul}</h3>
     <p>${lab.deskripsi}</p>
     `;
     labGrid.appendChild(kartu);
@@ -26,7 +26,7 @@ menuBtn.addEventListener("click", function () {
 const semuaLink = document.querySelectorAll(".nav-links a");
 semuaLink.forEach(function (link) {
     link.addEventListener("click", function () {
-        navLinks.classList,remove("buka");
+        navLinks.classList.remove("buka");
     });
 });
 
