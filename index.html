@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Majesty - Portofolio</title>
+    <link rel="stylesheet" href"style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#beranda" class="logo">ben<span>.majesty</span></a>
+        <button class="menu-btn" id="menuBtn" aria-label="Buka menu">&#9776</button>
+
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#keahlian">Keahlian</a></li>
+                <li><a href="#proyek">Proyek</a></li>
+                <li><a href="#lab">Tugas Lab</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero">
+            <div class="hero-text">
+                <p class="label">// halo, saya</p>
+                <h1>Ben Majesty Adrah Nesta</h1>
+                <p class="tagline">
+                    Mahasiswa <strong>UPH</strong> jurusan <strong>INFORMATIKA</strong> angkatan 2024.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#lab" class="btn btn-utama">Cek Tugas Lab</a>
+                    <a href="#kontak" class="btn btn-garis">Hubungi Saya!</a>
+                </div>
+            </div>
+            <img src="img/foto.jpg" alt="Foto Ben" class="hero-foto">
+        </section>
+
+        <section id="tentang" class="section">
+            <p class="label">01 - tentang</p>
+            <h2>Tentang Saya</h2>
+            <p>
+                Bisa dipanggil Ben atau Jesty, sejujurnya saya lebih suka membuat video dan edit video tapi secara spesifik pada bagian motion graphic.
+            </p>
+            <p>
+                Website ini adalah tugas lab dan sekaligus menjadi awal portofolio saya dalam menampilkan projek-projek saya (video lah)
+            </p>
+        </section>
+
+        <section id="keahlian" class="section">
+            <p class="label">02 - keahlian</p>
+            <h2>Keahlian</h2>
+            <div class="skill-grid">
+                <article class="skill-card">
+                    <h3>Web</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS</li>
+                        <li>Js</li>
+                    </ul>
+                </article>
+                <article class="skill-card">
+                    <h3>Editing</h3>
+                    <ul>
+                        <li>After Effect</li>
+                        <li>Premier Pro</li>
+                        <li>Davinci Studio</li>
+                        <li>Blender</li>
+                    </ul>
+                </article>
+                <article class="skill-card">
+                    <h3>Desain Grafis</h3>
+                    <ul>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                        <li>Figma</li>
+                        <li>Canva</li>
+                    </ul>
+                </article>
+        </section>
+
+        <section id="proyek" class="section">
+            <p class="label">03 - proyek</p>
+            <h2>Proyek</h2>
+            <div class="proyek-list">
+                <article class="proyek">
+                    <h3>Don't be Dumb</h3>
+                    <p>Video percobaan color grading: https://www.instagram.com/p/DeCmiGEI4Cf/</p>
+                    <span class="tag">Davinci</span>
+                </article>
+                <article>
+                    <h3>Aftersun (2022) ft. benspuluh</h3>
+                    <p>Video kolaborasi motion graphic</p>
+                    <span class="tag">After Effect</span>
+                </article>
+                <article class="proyek">
+                    <h3>3D Magazine</h3>
+                    <p>Percobaan membuat model 3D animasi buku/magazine</p>
+                    <span class="tag">Blender</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="lab" class="section">
+            <p class="label">04 - tugas lab</p>
+            <h2>Tugas Lab</h2>
+            <p>Beberapa tugas lab yang saya coba kerjakan. Klik untuk membuka</p>
+            <div class="lab-grid" id="labGrid"></div>
+        </section>
+
+        <section id="kontak" class="section">
+            <p class="label">05 - kontak</p>
+            <h2>Kontak</h2>
+            <form id="formKontak" class="form">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" required minlength="2" maxlength="30">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+
+                <label for="pesan">Pesan</label>
+                <textarea id="pesan" rows="4" required></textarea>
+
+                <button type="submit" class="btn btn-utama">Kirim</button>
+                <p id="hasilForm" class="hasil-form"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>® <span id="tahun"></span> Ben Majesty Adrah Nesta · 
+            <a href="https://github.com/bspuluh" target="_blank">Github</a></p>
+    </footer>
+</html>
