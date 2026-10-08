@@ -1,9 +1,8 @@
 :root {
-    --kertas: #f6f3ec;
-    --tinta: #1f2421;
-    --abu: #6b6f68;
-    --aksen: #2f6b4f;
-    --garis: #d9d4c7;
+    --putih: #ffffff;
+    --hitam: #111111;
+    --abu: #777777;
+    --garis: #e5e5e5;
 }
 
 * {
@@ -17,303 +16,323 @@ html {
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
-    background-color: var(--kertas);
-    color: var(--tinta);
-    line-height: 1.7;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: var(--putih);
+    color: var(--hitam);
+    line-height: 1.5;
 }
 
 a {
-    color: var(--aksen);
+    color: var(--hitam);
+    text-decoration: none;
+}
+
+.link-kecil,
+.label,
+.hero-info p,
+.hero-info a,
+.proyek-tag {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 8%;
-    border-bottom: 1px solid var(--garis);
-    background-color: var(--kertas);
+    padding: 20px 4%;
     position: sticky;
     top: 0;
-    z-index: 10;
+    background-color: var(--putih);
+    z-index: 20;
 }
 
 .logo {
-    font-family: "Courier New", monospace;
-    font-size: 22px;
+    font-size: 13px;
     font-weight: bold;
-    color: var(--tinta);
-    text-decoration: none;
 }
 
-.logo span {
-    color: var(--aksen)
+.header-kanan {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--hitam);
+}
+
+.menu-overlay {
+    display: none;            
+    position: fixed;         
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--putih);
+    z-index: 10;
+    align-items: center;
+    padding: 0 4%;
+}
+
+.menu-overlay.buka {
+    display: flex;
 }
 
 .nav-links {
-    display: flex;
-    gap: 28px;
     list-style: none;
 }
 
 .nav-links a {
-    font-family: "Courier New", monospace;
-    color: var(--tinta);
-    text-decoration: none;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1.15;
 }
 
-.menu-btn {
-    display: none;
-    background: none;
-    border: 1px solid var(--tinta);
-    font-size: 20px;
-    padding: 2px 10px;
-    cursor: pointer;
+.nav-links a span {
+    font-size: 64px;
+    color: var(--garis);     
+    display: inline-block;
+    width: 1.5em;            
+}
+
+.nav-links a:hover {
+    color: var(--abu);
 }
 
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 80px 8%;
-    min-height: 80vh;
+    padding: 20px 4% 0;
 }
 
 .hero h1 {
-    font-size: 52px;
-    line-height: 1.15;
-    margin: 8px 0 16px;
+    font-size: 12vw;         
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.03em;
 }
 
-.tagline {
-    font-size: 20px;
-    color: var(--abu);
-    max-width: 520px;
+.hero-info {
+    display: flex;
+    gap: 40px;
+    margin: 24px 0 20px;
+}
+
+.hero-info a:first-of-type {
+    margin-left: auto;
 }
 
 .hero-foto {
-    width: 280px;
-    height: 340px;
-    object-fit: cover;  
-    border: 1px solid var(--tinta);
-    box-shadow: 10px 10px 0 var(--aksen); 
-    background-color: var(--garis); 
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 14px;
-    margin-top: 28px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 22px;
-    font-family: "Courier New", monospace;
-    font-size: 15px;
-    text-decoration: none;
-    border: 1px solid var(--aksen);
-    cursor: pointer;
-}
-
-.btn-utama {
-    background-color: var(--aksen);
-    color: white;
-}
-
-.btn-garis {
-    background-color: transparent;
-    color: var(--aksen);
-}
-
-.btn:hover {
-    opacity: 0.8;
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;        
+    object-position: center 10%;   
+    display: block;
 }
 
 .section {
-    padding: 70px 8%;
-    border-top: 1px solid var(--garis);
-}
-
-.section h2 {
-    font-size: 34px;
-    margin-bottom: 18px;
-}
-
-.section p {
-    max-width: 680px;
-    margin-bottom: 12px;
+    padding: 100px 4%;
 }
 
 .label {
-    font-family: "Courier New", monospace;
-    color: var(--aksen);
-    font-size: 14px;
+    color: var(--abu);
+    margin-bottom: 20px;
+}
+
+.judul-besar {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.05;
+    margin-bottom: 60px;
+}
+
+.tentang-isi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.tentang-teks h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.tentang-teks p {
+    color: var(--abu);
+    max-width: 460px;
 }
 
 .skill-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.skill-card {
-    border: 1px solid var(--garis);
-    padding: 22px;
-    background-color: white;
+.skill-grid h4 {
+    font-size: 12px;
+    color: var(--abu);
+    margin-bottom: 10px;
 }
 
-.skill-card h3 {
-    font-family: "Courier New", monospace;
-    margin-bottom: 8px;
-}
-
-.skill-card ul {
-    list-style: square;
-    padding-left: 20px;
+.skill-grid ul {
+    list-style: none;
 }
 
 .proyek-list {
+    border-top: 1px solid var(--garis);
+}
+
+.proyek-item {
+    border-bottom: 1px solid var(--garis);
+}
+
+.proyek-row {
     display: flex;
-    flex-direction: column; 
-    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 28px 2%;
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: var(--hitam);
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.proyek {
-    border-left: 4px solid var(--aksen);
-    padding: 6px 0 6px 18px;
+.proyek-row:hover,
+.proyek-item.buka .proyek-row {
+    background-color: var(--hitam);
+    color: var(--putih);
 }
 
-.tag {
-    font-family: "Courier New", monospace;
-    font-size: 13px;
-    background-color: var(--tinta);
-    color: var(--kertas);
-    padding: 2px 8px;
+.proyek-nama {
+    font-size: 32px;
+    font-weight: 500;
 }
 
-.lab-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 18px;
-    margin-top: 20px;
+.proyek-video {
+    display: none;
+    padding: 24px 2% 40px;
 }
 
-.lab-card {
+.proyek-item.buka .proyek-video {
     display: block;
-    border: 1px solid var(--tinta);
-    padding: 20px;
-    background-color: white;
-    color: var(--tinta);
-    text-decoration: none;
-    transition: transform 0.2s; 
 }
 
-.lab-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 4px 4px 0 var(--aksen);
+.proyek-video video {
+    width: 100%;
+    max-height: 80vh;
+    background-color: var(--hitam);
 }
 
-.lab-card .nomor {
-    font-family: "Courier New", monospace;
-    color: var(--aksen);
-    font-size: 14px;
-}
-
-.lab-card h3 {
-    margin: 6px 0;
-}
-
-.lab-card p {
-    font-size: 15px;
+.proyek-video p {
     color: var(--abu);
-    margin: 0;
+    margin-top: 10px;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    max-width: 480px;
-    gap: 6px;
+    gap: 24px;
+    max-width: 560px;
 }
 
 .form input,
 .form textarea {
     font-family: inherit;
     font-size: 16px;
-    padding: 10px;
-    border: 1px solid var(--garis);
-    background-color: white;
-    margin-bottom: 10px;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid var(--hitam);   
+    background: none;
+    outline: none;
 }
 
 .form input:focus,
 .form textarea:focus {
-    outline: 2px solid var(--aksen);
+    border-bottom: 2px solid var(--hitam);
 }
 
-.form button {
+.btn {
     align-self: flex-start;
+    background-color: var(--hitam);
+    color: var(--putih);
+    border: none;
+    padding: 14px 32px;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--abu);
 }
 
 .hasil-form {
-    font-family: "Courier New", monospace;
-    color: var(--aksen);
-}
-
-.footer {
-    text-align: center;
-    padding: 30px;
-    border-top: 1px solid var(--garis);
-    font-family: "Courier New", monospace;
     font-size: 14px;
 }
 
+/* ---------- FOOTER ---------- */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 4%;
+    border-top: 1px solid var(--garis);
+    font-size: 12px;
+}
+
 @media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-        margin-left: auto; 
+    .link-kecil {
+        display: none;
     }
 
-    .nav-links {
-        display: none;            
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        gap: 0;
-        background-color: var(--kertas);
-        border-bottom: 1px solid var(--garis);
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 12px 8%;
-    }
-
-    .nav-links.buka {
-        display: flex;
-    }
-
-    .hero {
-        flex-direction: column-reverse; 
-        padding-top: 40px;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero-buttons {
-        justify-content: center;
+    .hero-info {
         flex-wrap: wrap;
+        gap: 6px 20px;
     }
 
-    .skill-grid {
-        grid-template-columns: 1fr; 
+    .hero-info p {
+        width: 100%;
+    }
+
+    .hero-info a:first-of-type {
+        margin-left: 0;
+    }
+
+    .hero-foto {
+        height: 60vh;
+    }
+
+    .judul-besar {
+        font-size: 32px;
+    }
+
+    .tentang-isi {
+        grid-template-columns: 1fr;
+    }
+
+    .proyek-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .proyek-nama {
+        font-size: 24px;
+    }
+
+    .nav-links a,
+    .nav-links a span {
+        font-size: 40px;
     }
 }
